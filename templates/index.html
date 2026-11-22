@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimateWatch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>🌍 ClimateWatch</h1>
+        <p>Explore Historical Weather Data</p>
+    </header>
+
+    <main>
+        <section class="search-box">
+            <h2>Weather Analysis</h2>
+
+            <form id="weatherForm">
+                <label>City</label>
+                <input type="text" id="city" placeholder="Enter a city..." required>
+
+                <label>Start Date</label>
+                <input type="date" id="startDate" required>
+
+                <label>End Date</label>
+                <input type="date" id="endDate" required>
+
+                <button type="submit">Analyze Weather</button>
+            </form>
+        </section>
+
+        <section class="results">
+            <h2>Analysis Results</h2>
+            <div id="result">
+                Your weather analysis will appear here.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>ClimateWatch © 2026 | Protect Our Planet 🌱</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
